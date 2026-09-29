@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #173f70;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+.hero {
+    background: linear-gradient(135deg, #173f70, #3674b5);
+    color: white;
+    padding: 70px 8%;
+}
+
+.hero div {
+    max-width: 650px;
+}
+
+.tag {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+button {
+    border: none;
+    background: #ff5b5b;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #e94545;
+}
+
+.search-section,
+.dashboard {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+h2 {
+    color: #173f70;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filters input,
+.filters select {
+    padding: 13px;
+    border: 1px solid #ccd5df;
+    border-radius: 7px;
+    background: white;
+}
+
+.filters input {
+    flex: 1;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-image {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.html {
+    background: #e44d26;
+}
+
+.js {
+    background: #e8b923;
+}
+
+.python {
+    background: #3776ab;
+}
+
+.design {
+    background: #9b59b6;
+}
+
+.course-content {
+    padding: 18px;
+}
+
+.course-content span {
+    color: #3674b5;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.course-content h3 {
+    margin: 10px 0;
+}
+
+.course-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.course-content strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.no-courses {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    color: #173f70;
+}
+
+.stat-card p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.table-box {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #edf3f9;
+}
+
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.pending {
+    color: #e09b00;
+    font-weight: bold;
+}
+
+footer {
+    background: #173f70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
