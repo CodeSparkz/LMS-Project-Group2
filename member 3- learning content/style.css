@@ -1,0 +1,741 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f6;
+    color: #263238;
+    line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+    background: #12343b;
+    color: white;
+
+    padding: 16px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 4px solid #3c8c87;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+
+    background: #3c8c87;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.logo-area h1 {
+    font-size: 21px;
+}
+
+.logo-area p {
+    font-size: 12px;
+    color: #c8d8d8;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-btn {
+    border: none;
+    background: transparent;
+    color: #d9e5e5;
+
+    padding: 9px 17px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #3c8c87;
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 35px auto 60px;
+}
+
+.page-heading {
+    margin-bottom: 22px;
+}
+
+.page-heading h2 {
+    font-size: 26px;
+    color: #12343b;
+    margin-bottom: 5px;
+}
+
+.page-heading p {
+    color: #718080;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: white;
+
+    border: 1px solid #dce5e4;
+    border-radius: 8px;
+
+    padding: 24px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(18, 52, 59, 0.05);
+}
+
+.card h3 {
+    color: #12343b;
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.card-text {
+    color: #718080;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card-heading {
+    margin-bottom: 18px;
+}
+
+.card-heading p {
+    color: #718080;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+.form-group {
+    margin-top: 18px;
+}
+
+.form-group label,
+#urlArea label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    color: #344b4f;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+    width: 100%;
+
+    border: 1px solid #ccd9d8;
+    border-radius: 5px;
+
+    padding: 11px 12px;
+
+    font-size: 14px;
+
+    outline: none;
+    background: #fff;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: #3c8c87;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   VIDEO SOURCE TABS
+========================= */
+
+.source-tabs {
+    display: flex;
+
+    border-bottom: 1px solid #dce5e4;
+
+    margin-bottom: 18px;
+}
+
+.source-btn {
+    border: none;
+    background: transparent;
+
+    padding: 10px 16px;
+
+    color: #718080;
+
+    cursor: pointer;
+
+    border-bottom: 2px solid transparent;
+}
+
+.source-btn.active {
+    color: #28736f;
+    border-bottom-color: #3c8c87;
+    font-weight: bold;
+}
+
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+.upload-box {
+    min-height: 125px;
+
+    border: 1px dashed #9db8b6;
+    border-radius: 7px;
+
+    background: #f8fbfa;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition: 0.2s;
+}
+
+.upload-box:hover {
+    background: #eef7f5;
+    border-color: #3c8c87;
+}
+
+.upload-icon {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #d9ecea;
+    color: #28736f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.upload-box strong {
+    color: #344b4f;
+    font-size: 14px;
+}
+
+.upload-box small {
+    color: #8a9999;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+/* =========================
+   VIDEO PREVIEW
+========================= */
+
+.preview-area {
+    margin-top: 22px;
+}
+
+.preview-area h4 {
+    color: #344b4f;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.video-preview {
+    width: 100%;
+    min-height: 270px;
+
+    background: #17272b;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-preview video,
+.video-preview iframe {
+    width: 100%;
+    height: 400px;
+
+    border: none;
+}
+
+.empty-preview {
+    color: #b9c6c6;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.btn {
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.btn.primary {
+    background: #28736f;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #205e5b;
+}
+
+.btn.danger {
+    background: #f5e7e5;
+    color: #a5483f;
+}
+
+.btn.danger:hover {
+    background: #edd5d2;
+}
+
+.btn.large {
+    padding: 12px 25px;
+}
+
+
+/* =========================
+   RESOURCES
+========================= */
+
+.resource-upload {
+    border: 1px solid #cbdad8;
+
+    background: #f8fbfa;
+
+    border-radius: 5px;
+
+    padding: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+
+    margin-bottom: 15px;
+}
+
+.resource-upload:hover {
+    border-color: #3c8c87;
+}
+
+.resource-upload span {
+    color: #28736f;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.resource-upload small {
+    color: #899898;
+    font-size: 12px;
+}
+
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.resource-item {
+    border: 1px solid #e0e7e6;
+
+    padding: 12px 14px;
+
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff;
+}
+
+.resource-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-icon {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 5px;
+
+    background: #e3efed;
+    color: #28736f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.resource-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #344b4f;
+}
+
+.resource-size {
+    font-size: 11px;
+    color: #899898;
+}
+
+.resource-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.small-btn {
+    border: 1px solid #ccd9d8;
+
+    background: white;
+
+    color: #28736f;
+
+    padding: 6px 10px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.small-btn:hover {
+    background: #eef7f5;
+}
+
+.delete-btn {
+    color: #a5483f;
+}
+
+
+/* =========================
+   SAVE SECTION
+========================= */
+
+.save-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 8px;
+}
+
+#saveMessage {
+    color: #28736f;
+    font-size: 13px;
+}
+
+
+/* =========================
+   STUDENT SECTION
+========================= */
+
+.student-card {
+    background: white;
+
+    border: 1px solid #dce5e4;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(18, 52, 59, 0.05);
+}
+
+.student-video {
+    background: #17272b;
+
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-video video,
+.student-video iframe {
+    width: 100%;
+    height: 500px;
+
+    border: none;
+}
+
+.student-info {
+    padding: 22px;
+}
+
+.student-info h2 {
+    color: #12343b;
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.student-info > p {
+    color: #718080;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+
+    color: #506366;
+
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+
+    background: #dce7e5;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    width: 0%;
+
+    background: #3c8c87;
+
+    transition: width 0.2s;
+}
+
+.completion-badge {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    background: #e3f1e9;
+    color: #28704b;
+
+    padding: 6px 11px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 750px) {
+
+    .topbar {
+        padding: 15px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .nav-btn {
+        flex: 1;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 25px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .video-preview video,
+    .video-preview iframe {
+        height: 280px;
+    }
+
+    .student-video video,
+    .student-video iframe {
+        height: 280px;
+    }
+
+    .resource-upload {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .resource-item {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .resource-actions {
+        flex-direction: column;
+    }
+
+    .save-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo-area h1 {
+        font-size: 18px;
+    }
+
+    .page-heading h2 {
+        font-size: 22px;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .button-row .btn {
+        width: 100%;
+    }
+
+    .video-preview {
+        min-height: 210px;
+    }
+
+    .video-preview video,
+    .video-preview iframe {
+        height: 220px;
+    }
+
+    .student-video {
+        min-height: 220px;
+    }
+
+    .student-video video,
+    .student-video iframe {
+        height: 220px;
+    }
+}

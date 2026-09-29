@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduLearn LMS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="topbar">
+
+        <div class="logo-area">
+            <div class="logo">EL</div>
+
+            <div>
+                <h1>EduLearn</h1>
+                <p>Learning Management System</p>
+            </div>
+        </div>
+
+        <nav>
+            <button class="nav-btn active" id="instructorBtn">
+                Instructor
+            </button>
+
+            <button class="nav-btn" id="studentBtn">
+                Student
+            </button>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- ================= INSTRUCTOR VIEW ================= -->
+
+        <section id="instructorView">
+
+            <div class="page-heading">
+                <h2>Lesson Manager</h2>
+                <p>Create a lesson and add video lessons or learning resources.</p>
+            </div>
+
+
+            <!-- Lesson Information -->
+            <div class="card">
+
+                <h3>Lesson Information</h3>
+
+                <div class="form-group">
+                    <label for="lessonTitle">Lesson Title</label>
+
+                    <input
+                        type="text"
+                        id="lessonTitle"
+                        placeholder="Enter lesson title"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="lessonDescription">
+                        Lesson Description
+                    </label>
+
+                    <textarea
+                        id="lessonDescription"
+                        rows="4"
+                        placeholder="Write a short description..."
+                    ></textarea>
+                </div>
+
+            </div>
+
+
+            <!-- Video Section -->
+            <div class="card">
+
+                <div class="card-heading">
+                    <div>
+                        <h3>Video Lesson</h3>
+                        <p>Add a video file or paste a YouTube/Vimeo link.</p>
+                    </div>
+                </div>
+
+
+                <div class="source-tabs">
+
+                    <button
+                        class="source-btn active"
+                        id="uploadTab"
+                    >
+                        Upload Video
+                    </button>
+
+                    <button
+                        class="source-btn"
+                        id="urlTab"
+                    >
+                        Video URL
+                    </button>
+
+                </div>
+
+
+                <!-- Upload Video -->
+                <div id="uploadArea">
+
+                    <label for="videoFile" class="upload-box">
+
+                        <span class="upload-icon">+</span>
+
+                        <strong>Select Video File</strong>
+
+                        <small>
+                            MP4, WebM or other browser-supported video
+                        </small>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="videoFile"
+                        accept="video/*"
+                        hidden
+                    >
+
+                </div>
+
+
+                <!-- Video URL -->
+                <div id="urlArea" class="hidden">
+
+                    <label for="videoUrl">YouTube / Vimeo URL</label>
+
+                    <input
+                        type="url"
+                        id="videoUrl"
+                        placeholder="https://www.youtube.com/watch?v=..."
+                    >
+
+                </div>
+
+
+                <!-- Preview -->
+                <div class="preview-area">
+
+                    <h4>Preview</h4>
+
+                    <div id="videoPreview" class="video-preview">
+
+                        <div class="empty-preview">
+                            No video selected
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        class="btn primary"
+                        id="saveVideoBtn"
+                    >
+                        Save Video
+                    </button>
+
+                    <button
+                        class="btn danger"
+                        id="removeVideoBtn"
+                    >
+                        Remove Video
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Resources -->
+            <div class="card">
+
+                <h3>Lesson Resources</h3>
+
+                <p class="card-text">
+                    Add PDFs, slides, worksheets or other lesson files.
+                </p>
+
+
+                <label for="resourceFiles" class="resource-upload">
+
+                    <span>Choose Files</span>
+
+                    <small>
+                        PDF, PPT, PPTX, DOC, DOCX and TXT
+                    </small>
+
+                </label>
+
+                <input
+                    type="file"
+                    id="resourceFiles"
+                    multiple
+                    accept=".pdf,.ppt,.pptx,.doc,.docx,.txt"
+                    hidden
+                >
+
+
+                <div id="resourceList" class="resource-list"></div>
+
+            </div>
+
+
+            <!-- Save Lesson -->
+            <div class="save-section">
+
+                <button
+                    class="btn primary large"
+                    id="saveLessonBtn"
+                >
+                    Save Lesson
+                </button>
+
+                <p id="saveMessage"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STUDENT VIEW ================= -->
+
+        <section id="studentView" class="hidden">
+
+            <div class="page-heading">
+
+                <h2>My Lesson</h2>
+
+                <p>
+                    Watch the lesson and access the available resources.
+                </p>
+
+            </div>
+
+
+            <div class="student-card">
+
+                <div class="student-video" id="studentVideoArea">
+                    <div class="empty-preview">
+                        No video available
+                    </div>
+                </div>
+
+
+                <div class="student-info">
+
+                    <h2 id="studentTitle">
+                        Lesson Title
+                    </h2>
+
+                    <p id="studentDescription">
+                        Lesson description
+                    </p>
+
+
+                    <div class="progress-header">
+
+                        <span>Video Progress</span>
+
+                        <span id="progressText">
+                            0%
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            id="lessonProgress"
+                            class="progress-fill"
+                        ></div>
+
+                    </div>
+
+
+                    <div
+                        id="completionBadge"
+                        class="completion-badge hidden"
+                    >
+                        Lesson Completed
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Student Resources -->
+            <div class="card">
+
+                <h3>Lesson Resources</h3>
+
+                <p class="card-text">
+                    Open or download the resources attached to this lesson.
+                </p>
+
+                <div
+                    id="studentResources"
+                    class="resource-list"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script/data.js"></script>
+    <script src="script/app.js"></script>
+
+</body>
+</html>
