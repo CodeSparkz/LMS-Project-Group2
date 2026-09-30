@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #173f70;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    background: #3674b5;
+    color: white;
+    padding: 70px 8%;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin: 12px 0;
+}
+
+button {
+    background: #ff5b5b;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.courses,
+.dashboard {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+#search {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.course-card h3,
+.course-card p,
+.course-card button {
+    margin-left: 18px;
+}
+
+.course-card p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.course-image {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.html {
+    background: #e44d26;
+}
+
+.js {
+    background: #d6a900;
+}
+
+.python {
+    background: #3776ab;
+}
+
+.ui {
+    background: #8e44ad;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stats div {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.stats h3 {
+    color: #173f70;
+    font-size: 30px;
+}
+
+footer {
+    background: #173f70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+@media (max-width: 800px) {
+    .course-container,
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .course-container,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
