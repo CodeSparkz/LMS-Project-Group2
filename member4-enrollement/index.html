@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LearnHub | Course Enrollment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Learn</span>Hub
+        </div>
+
+        <nav>
+            <a href="#courses">Courses</a>
+            <a href="#learning">My Learning</a>
+        </nav>
+
+       <button class="profile-btn" onclick="openLogin()">
+         👤 Student Login
+       </button>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO LEARNHUB</p>
+
+            <h1>
+                Learn skills.<br>
+                Build your future.
+            </h1>
+
+            <p>
+                Explore courses, enroll instantly and track your
+                learning progress in one place.
+            </p>
+
+            <a href="#courses" class="hero-btn">
+                Explore Courses
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="courses-section" id="courses">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">AVAILABLE COURSES</p>
+                <h2>Explore Courses</h2>
+            </div>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search courses..."
+            >
+
+        </div>
+
+
+        <div class="course-grid" id="courseContainer">
+
+        </div>
+
+    </section>
+
+    <section class="learning-section" id="learning">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">STUDENT DASHBOARD</p>
+                <h2>My Learning</h2>
+            </div>
+
+            <div class="course-count">
+                <span id="courseCount">0</span> Courses
+            </div>
+
+        </div>
+
+
+        <div id="learningContainer" class="learning-grid">
+
+        </div>
+
+    </section>
+
+    <div class="modal" id="enrollModal">
+
+        <div class="modal-box">
+
+            <button class="close-btn" onclick="closeModal()">
+                ×
+            </button>
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>Enrollment Successful!</h2>
+
+            <p id="modalMessage">
+                You have successfully enrolled in the course.
+            </p>
+
+            <button
+                class="modal-btn"
+                onclick="goToLearning()"
+            >
+                Go to My Learning
+            </button>
+
+        </div>
+
+    </div>
+    
+
+<div class="login-modal" id="loginModal">
+
+    <div class="login-box">
+
+        <button class="login-close" onclick="closeLogin()">
+            ×
+        </button>
+
+        <div class="login-icon">
+            👤
+        </div>
+
+        <h2>Student Login</h2>
+
+        <p class="login-subtitle">
+            Login to access your learning dashboard
+        </p>
+
+        <form id="loginForm">
+
+            <label>Student ID</label>
+
+            <input
+                type="text"
+                id="studentId"
+                placeholder="Enter Student ID"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+                required
+            >
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <p id="loginMessage"></p>
+
+    </div>
+
+</div>
+
+
+    <footer>
+
+        <p>
+            © 2026 LearnHub | Student Enrollment System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
