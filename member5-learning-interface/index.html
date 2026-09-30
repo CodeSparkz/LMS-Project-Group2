@@ -1,0 +1,84 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Courses</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+    <h2>LearnHub</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#dashboard">Dashboard</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <p>LEARNING PLATFORM</p>
+    <h1>Explore Courses</h1>
+    <p>Find the right course and improve your skills.</p>
+    <button onclick="showCourses()">Explore Courses</button>
+</section>
+
+<section id="courses" class="courses">
+    <h2>Available Courses</h2>
+
+    <input type="text" id="search" placeholder="Search courses..."
+           onkeyup="searchCourses()">
+
+    <div class="course-container">
+
+        <div class="course-card">
+            <div class="course-image html">HTML</div>
+            <h3>HTML & CSS</h3>
+            <p>Learn website development.</p>
+            <button onclick="enroll('HTML & CSS')">Enroll Now</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image js">JS</div>
+            <h3>JavaScript</h3>
+            <p>Learn JavaScript programming.</p>
+            <button onclick="enroll('JavaScript')">Enroll Now</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image python">PY</div>
+            <h3>Python</h3>
+            <p>Learn Python programming.</p>
+            <button onclick="enroll('Python')">Enroll Now</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image ui">UI</div>
+            <h3>UI / UX Design</h3>
+            <p>Learn interface design.</p>
+            <button onclick="enroll('UI / UX Design')">Enroll Now</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="dashboard" class="dashboard">
+    <h2>Instructor Overview</h2>
+
+    <div class="stats">
+        <div><h3>12</h3><p>Total Courses</p></div>
+        <div><h3>850</h3><p>Students</p></div>
+        <div><h3>8</h3><p>Active Courses</p></div>
+        <div><h3>92%</h3><p>Completion</p></div>
+    </div>
+</section>
+
+<footer>
+    © 2026 LearnHub
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
